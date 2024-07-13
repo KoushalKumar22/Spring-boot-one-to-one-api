@@ -51,4 +51,17 @@ public class EmployeeController {
     }
 
 
+    @PutMapping("/{id}")
+    public ResponseEntity<Employee> updateUser(@PathVariable int id, @RequestBody Employee employee) {
+        return erepo.findById(id)
+                .map(user -> {
+                    user.setName(employee.getName());
+                    user.setAge(employee.getAge());
+                    user.setAddress(employee.getAddress());
+                    Employee updatedUser = erepo.save(user);
+                    return ResponseEntity.ok(updatedUser);
+                })
+                .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
 }
