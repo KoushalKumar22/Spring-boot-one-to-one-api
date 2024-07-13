@@ -27,7 +27,7 @@ This project demonstrates a simple Spring Boot application with a one-to-one bid
 
 1. Clone the repository:
    ```sh
-   git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/KoushalKumar22/Dto-Projection-Api-Springboot.git)
+   git clone https://github.com/KoushalKumar22/Spring-boot-one-to-one-api.git
    cd Spring-boot-one-to-one-api
 
 2. Build the project:
